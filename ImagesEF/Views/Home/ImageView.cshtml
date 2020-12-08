@@ -1,0 +1,15 @@
+﻿@model ImageViewModel
+
+<link href="~/css/image.css" rel="stylesheet" />
+
+<div class="row" style="margin-top:10px;">
+    <div class="col-md-6 col-md-offset-6 well">
+        <h2>@Model.Image.Title</h2>
+        <img class="large-image" src="@Model.Image.Link" />
+        <button id="like" data-id="@Model.Image.Id" style="margin-top:10px;" class="btn btn-danger">Like!</button>
+        <h3><span id="like-count">@Model.Image.LikeCount</span> Likes</h3>
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/js/image.js"></script> }
